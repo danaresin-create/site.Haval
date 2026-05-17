@@ -1,0 +1,1586 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Премиальное спецпредложение на автомобили HAVAL: выгода, trade-in, кредит и сервисные преимущества." />
+  <title>HAVAL Special Offer — Futuristic Premium Landing</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <style>
+    :root {
+      --bg: #030407;
+      --bg-soft: #080a0f;
+      --card: rgba(255, 255, 255, 0.055);
+      --card-strong: rgba(255, 255, 255, 0.105);
+      --line: rgba(255, 255, 255, 0.16);
+      --line-soft: rgba(255, 255, 255, 0.085);
+      --text: #f6f7f9;
+      --muted: rgba(246, 247, 249, 0.66);
+      --muted-strong: rgba(246, 247, 249, 0.82);
+      --accent: #66b7ff;
+      --accent-2: #b9c7d8;
+      --accent-3: #eef3f8;
+      --danger: #ff5978;
+      --radius-sm: 14px;
+      --radius: 24px;
+      --radius-lg: 36px;
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.38);
+      --container: 1180px;
+      --ease: cubic-bezier(.2, .8, .2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 12% 16%, rgba(102, 183, 255, 0.22), transparent 28%),
+        radial-gradient(circle at 82% 8%, rgba(185, 199, 216, 0.16), transparent 34%),
+        radial-gradient(circle at 76% 82%, rgba(102, 183, 255, 0.1), transparent 26%),
+        linear-gradient(135deg, #03060b 0%, #0a0f17 48%, #020306 100%);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,.82), rgba(0,0,0,.12));
+      z-index: -2;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(180deg, transparent 0%, rgba(7, 10, 18, 0.72) 78%, #070a12 100%);
+      z-index: -1;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    .container {
+      width: min(100% - 40px, var(--container));
+      margin-inline: auto;
+    }
+
+    .glass {
+      background: linear-gradient(135deg, rgba(255, 255, 255, .13), rgba(255, 255, 255, .045));
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      padding: 16px 0;
+      transition: background .3s var(--ease), padding .3s var(--ease);
+    }
+
+    .topbar.is-scrolled {
+      background: rgba(7, 10, 18, .72);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+      border-bottom: 1px solid var(--line-soft);
+      padding: 10px 0;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .logo__mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 28% 18%, rgba(255,255,255,.28), transparent 28%),
+        linear-gradient(135deg, #1c5f93, #6d7f96);
+      color: #f6f7f9;
+      box-shadow: 0 0 34px rgba(102, 183, 255, .34), inset 0 1px 0 rgba(255,255,255,.72);
+    }
+
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      color: var(--muted-strong);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .nav__links a {
+      position: relative;
+      transition: color .25s var(--ease), transform .25s var(--ease);
+    }
+
+    .nav__links a:hover {
+      color: var(--text);
+      transform: translateY(-1px);
+    }
+
+    .nav__links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -7px;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), rgba(185, 199, 216, .72));
+      transition: width .25s var(--ease);
+    }
+
+    .nav__links a:hover::after {
+      width: 100%;
+    }
+
+    .burger {
+      display: none;
+      width: 46px;
+      height: 46px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(255,255,255,.08);
+      color: var(--text);
+      cursor: pointer;
+      transition: transform .25s var(--ease), background .25s var(--ease);
+    }
+
+    .burger:hover {
+      transform: scale(1.05);
+      background: rgba(255,255,255,.14);
+    }
+
+    .burger span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      margin: 5px auto;
+      background: currentColor;
+      border-radius: 999px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 0 22px;
+      border: 0;
+      border-radius: 999px;
+      color: var(--text);
+      font-weight: 800;
+      cursor: pointer;
+      background: linear-gradient(135deg, #1c5f93, #7f8da0);
+      color: #f6f7f9;
+      box-shadow: 0 18px 50px rgba(102, 183, 255, .18), inset 0 1px 0 rgba(255,255,255,.55);
+      transition: transform .28s var(--ease), box-shadow .28s var(--ease), filter .28s var(--ease);
+      will-change: transform;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 24px 74px rgba(102, 183, 255, .24), inset 0 1px 0 rgba(255,255,255,.65);
+      filter: saturate(1.1);
+    }
+
+    .btn:active {
+      transform: translateY(-1px) scale(.99);
+    }
+
+    .btn--ghost {
+      background: rgba(255,255,255,.08);
+      border: 1px solid var(--line);
+      box-shadow: none;
+    }
+
+    .btn--ghost:hover {
+      box-shadow: 0 20px 60px rgba(0,0,0,.24);
+      background: rgba(255,255,255,.13);
+    }
+
+    .hero {
+      position: relative;
+      padding: 72px 0 60px;
+    }
+
+    .hero__grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.03fr) minmax(360px, .97fr);
+      align-items: center;
+      gap: 38px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      color: var(--muted-strong);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      background: rgba(255,255,255,.07);
+      border: 1px solid var(--line-soft);
+    }
+
+    .pulse {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 0 rgba(102, 183, 255, .42);
+      animation: pulse 1.7s infinite;
+    }
+
+    @keyframes pulse {
+      70% { box-shadow: 0 0 0 13px rgba(102, 183, 255, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(102, 183, 255, 0); }
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    .hero h1 {
+      max-width: 780px;
+      margin: 22px 0 18px;
+      font-size: clamp(42px, 7vw, 88px);
+      line-height: .92;
+      letter-spacing: -.07em;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #fff, var(--accent-3) 42%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero__lead {
+      max-width: 620px;
+      margin-bottom: 30px;
+      color: var(--muted);
+      font-size: clamp(17px, 2.4vw, 21px);
+      line-height: 1.65;
+    }
+
+    .hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      max-width: 660px;
+    }
+
+    .stat {
+      padding: 18px;
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line-soft);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: clamp(22px, 3vw, 32px);
+      letter-spacing: -.04em;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .hero-card {
+      position: relative;
+      min-height: 550px;
+      padding: 22px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      background: radial-gradient(circle at 40% 12%, rgba(255,255,255,.18), transparent 30%), radial-gradient(circle at 90% 80%, rgba(130,136,146,.26), transparent 35%);
+      z-index: -1;
+    }
+
+    .hero-car {
+      position: absolute;
+      right: -12%;
+      bottom: 66px;
+      width: 118%;
+      filter: drop-shadow(0 40px 60px rgba(0,0,0,.55));
+      transform: translateZ(0);
+      animation: floatCar 6s ease-in-out infinite;
+    }
+
+    @keyframes floatCar {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-14px); }
+    }
+
+    .offer-chip {
+      position: relative;
+      z-index: 2;
+      width: fit-content;
+      padding: 16px 18px;
+      border-radius: 20px;
+      background: rgba(7, 10, 18, .46);
+      border: 1px solid rgba(255,255,255,.2);
+      backdrop-filter: blur(18px);
+    }
+
+    .offer-chip span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-weight: 800;
+    }
+
+    .offer-chip strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 26px;
+      letter-spacing: -.04em;
+    }
+
+    .timer-card {
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      bottom: 22px;
+      z-index: 2;
+      padding: 18px;
+      border-radius: 26px;
+      background: rgba(7, 10, 18, .58);
+      border: 1px solid rgba(255,255,255,.18);
+      backdrop-filter: blur(20px);
+    }
+
+    .timer-card__head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+      color: var(--muted-strong);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .countdown {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .countdown__item {
+      padding: 13px 8px;
+      border-radius: 18px;
+      text-align: center;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.1);
+    }
+
+    .countdown__item strong {
+      display: block;
+      font-size: clamp(22px, 4vw, 34px);
+      line-height: 1;
+    }
+
+    .countdown__item span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+    }
+
+    section {
+      padding: 76px 0;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 34px;
+    }
+
+    .section-head h2 {
+      max-width: 720px;
+      margin: 0;
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: .98;
+      letter-spacing: -.055em;
+    }
+
+    .section-head p {
+      max-width: 410px;
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .benefit {
+      min-height: 224px;
+      padding: 22px;
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.065);
+      border: 1px solid var(--line-soft);
+      transition: transform .28s var(--ease), background .28s var(--ease), border-color .28s var(--ease);
+    }
+
+    .benefit:hover {
+      transform: translateY(-8px) scale(1.015);
+      background: rgba(255,255,255,.1);
+      border-color: rgba(255,255,255,.28);
+    }
+
+    .benefit__icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 22px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(255,255,255,.14), rgba(130,136,146,.14));
+      border: 1px solid rgba(255,255,255,.16);
+      font-size: 22px;
+    }
+
+    .benefit h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+      letter-spacing: -.03em;
+    }
+
+    .benefit p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.58;
+      font-size: 14px;
+    }
+
+    .models {
+      overflow: hidden;
+    }
+
+    .model-card {
+      height: auto;
+      min-height: 560px;
+      padding: 24px;
+      border-radius: 32px;
+      background: linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.045));
+      border: 1px solid var(--line);
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .model-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 70% 24%, rgba(255,255,255,.11), transparent 32%);
+      pointer-events: none;
+    }
+
+    .model-card__top {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .model-card h3 {
+      margin: 0 0 8px;
+      font-size: clamp(28px, 4vw, 42px);
+      letter-spacing: -.05em;
+    }
+
+    .model-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .badge {
+      flex: 0 0 auto;
+      padding: 9px 12px;
+      border-radius: 999px;
+      color: #f6f7f9;
+      font-weight: 900;
+      font-size: 12px;
+      background: linear-gradient(135deg, #1c5f93, #7f8da0);
+    }
+
+    .model-card__image {
+      position: relative;
+      z-index: 1;
+      width: 112%;
+      margin: 36px -6% 16px;
+      border-radius: 26px;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+      background: linear-gradient(180deg, rgba(255,255,255,.94), rgba(215,218,224,.9));
+      border: 1px solid rgba(255,255,255,.14);
+    }
+
+    .model-card__image--product {
+      padding: 10px;
+    }
+
+    .model-card__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transform: scale(1.02);
+      transition: transform .55s var(--ease);
+    }
+
+    .model-card:hover .model-card__image img {
+      transform: scale(1.08);
+    }
+
+    .model-card__bottom {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .price span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .price strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 30px;
+      letter-spacing: -.04em;
+    }
+
+    .slider-controls {
+      display: flex;
+      gap: 10px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      position: static;
+      width: 52px;
+      height: 52px;
+      margin: 0;
+      border-radius: 999px;
+      color: var(--text);
+      background: rgba(255,255,255,.08);
+      border: 1px solid var(--line);
+      transition: transform .25s var(--ease), background .25s var(--ease);
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      font-size: 17px;
+      font-weight: 900;
+    }
+
+    .swiper-button-prev:hover,
+    .swiper-button-next:hover {
+      transform: scale(1.06);
+      background: rgba(255,255,255,.14);
+    }
+
+    .swiper-pagination {
+      position: static;
+      margin-top: 24px;
+    }
+
+    .swiper-pagination-bullet {
+      background: rgba(255,255,255,.55);
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: #ffffff;
+      box-shadow: 0 0 18px rgba(255,255,255,.42);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .steps__main {
+      padding: 30px;
+      border-radius: var(--radius-lg);
+      min-height: 460px;
+      display: grid;
+      align-content: end;
+      background:
+        linear-gradient(180deg, rgba(7, 10, 18, .04) 0%, rgba(7, 10, 18, .9) 78%),
+        url("haval-assets/dargo-x-orange.png") center 34% / min(86%, 560px) no-repeat,
+        radial-gradient(circle at 50% 28%, rgba(102, 183, 255, .18), transparent 34%),
+        linear-gradient(135deg, rgba(185, 199, 216, .16), rgba(7, 10, 18, .92));
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+
+    .steps__main h2 {
+      max-width: 620px;
+      margin-bottom: 16px;
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: .98;
+      letter-spacing: -.055em;
+    }
+
+    .steps__main p {
+      max-width: 560px;
+      margin-bottom: 0;
+      color: var(--muted-strong);
+      line-height: 1.65;
+    }
+
+    .step-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 54px 1fr;
+      gap: 16px;
+      align-items: start;
+      padding: 20px;
+      border-radius: 24px;
+      background: rgba(255,255,255,.065);
+      border: 1px solid var(--line-soft);
+      transition: transform .28s var(--ease), background .28s var(--ease);
+    }
+
+    .step:hover {
+      transform: translateX(8px);
+      background: rgba(255,255,255,.1);
+    }
+
+    .step__num {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border-radius: 18px;
+      font-weight: 900;
+      color: #f6f7f9;
+      background: linear-gradient(135deg, #1c5f93, #7f8da0);
+    }
+
+    .step h3 {
+      margin-bottom: 8px;
+      font-size: 19px;
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 14px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr .8fr;
+      grid-auto-rows: 230px;
+      gap: 16px;
+    }
+
+    .gallery-link {
+      position: relative;
+      border-radius: 28px;
+      overflow: hidden;
+      border: 1px solid var(--line-soft);
+      background: rgba(255,255,255,.06);
+      transition: transform .3s var(--ease), border-color .3s var(--ease);
+    }
+
+    .gallery-link:first-child {
+      grid-row: span 2;
+    }
+
+    .gallery-link:hover {
+      transform: translateY(-6px) scale(1.01);
+      border-color: rgba(255,255,255,.3);
+    }
+
+    .gallery-link img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .55s var(--ease);
+    }
+
+    .gallery-link--product {
+      background:
+        radial-gradient(circle at 50% 82%, rgba(102, 183, 255, .12), transparent 32%),
+        linear-gradient(180deg, rgba(255,255,255,.96), rgba(214,218,226,.92));
+    }
+
+    .gallery-link--product img {
+      object-fit: contain;
+      padding: 18px;
+      filter: drop-shadow(0 18px 16px rgba(0,0,0,.24));
+    }
+
+    .gallery-link:hover img {
+      transform: scale(1.08);
+    }
+
+    .gallery-link::after {
+      content: "Открыть";
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(7,10,18,.58);
+      border: 1px solid rgba(255,255,255,.18);
+      backdrop-filter: blur(14px);
+      color: var(--text);
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .cta {
+      padding-bottom: 96px;
+    }
+
+    .cta-card {
+      position: relative;
+      padding: clamp(28px, 5vw, 56px);
+      border-radius: 40px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .cta-card::before {
+      content: "";
+      position: absolute;
+      inset: -2px;
+      background: radial-gradient(circle at 20% 20%, rgba(255,255,255,.13), transparent 32%), radial-gradient(circle at 82% 72%, rgba(130,136,146,.22), transparent 34%);
+      pointer-events: none;
+    }
+
+    .cta-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-card h2 {
+      max-width: 820px;
+      margin: 0 auto 18px;
+      font-size: clamp(34px, 5vw, 64px);
+      line-height: .98;
+      letter-spacing: -.06em;
+    }
+
+    .cta-card p {
+      max-width: 640px;
+      margin: 0 auto 28px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.65;
+    }
+
+    .footer {
+      padding: 28px 0 40px;
+      color: var(--muted);
+      border-top: 1px solid var(--line-soft);
+      font-size: 13px;
+    }
+
+    .footer__inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .modal {
+      display: none;
+      width: min(100% - 24px, 460px);
+      padding: 0;
+      border-radius: 30px;
+      background: rgba(7, 10, 18, .72);
+      border: 1px solid rgba(255,255,255,.18);
+      color: var(--text);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      box-shadow: 0 30px 100px rgba(0,0,0,.55);
+      overflow: hidden;
+    }
+
+    .modal__inner {
+      padding: 30px;
+      background: radial-gradient(circle at top right, rgba(255,255,255,.12), transparent 36%);
+    }
+
+    .modal h2 {
+      margin-bottom: 10px;
+      font-size: 32px;
+      letter-spacing: -.04em;
+    }
+
+    .modal p {
+      margin-bottom: 22px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .form {
+      display: grid;
+      gap: 14px;
+    }
+
+    .field {
+      display: grid;
+      gap: 8px;
+    }
+
+    .field label {
+      color: var(--muted-strong);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .field input {
+      width: 100%;
+      height: 58px;
+      padding: 0 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.08);
+      color: var(--text);
+      outline: none;
+      transition: border-color .25s var(--ease), background .25s var(--ease), transform .25s var(--ease);
+    }
+
+    .field input:focus {
+      border-color: rgba(255,255,255,.5);
+      background: rgba(255,255,255,.12);
+      transform: scale(1.01);
+    }
+
+    .policy {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .fancybox-bg {
+      background: rgba(2, 4, 10, .72);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .fancybox-slide--html .fancybox-close-small {
+      color: var(--text);
+      padding: 10px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .7s var(--ease), transform .7s var(--ease);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1024px) {
+      .hero__grid,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        min-height: 520px;
+      }
+
+      .benefits {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 820px) {
+      .container {
+        width: min(100% - 28px, var(--container));
+      }
+
+      .burger {
+        display: block;
+      }
+
+      .nav__links {
+        position: fixed;
+        inset: 76px 14px auto;
+        display: grid;
+        gap: 6px;
+        padding: 14px;
+        border-radius: 24px;
+        background: rgba(7, 10, 18, .88);
+        border: 1px solid var(--line);
+        backdrop-filter: blur(22px);
+        transform: translateY(-18px);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .25s var(--ease), transform .25s var(--ease);
+      }
+
+      .nav__links.is-open {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+
+      .nav__links a,
+      .nav__links .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 16px;
+      }
+
+      .hero {
+        padding-top: 42px;
+      }
+
+      .hero h1 {
+        letter-spacing: -.055em;
+      }
+
+      .stats,
+      .countdown {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .section-head {
+        display: grid;
+      }
+
+      section {
+        padding: 58px 0;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .hero-card {
+        min-height: 500px;
+        padding: 16px;
+        border-radius: 28px;
+      }
+
+      .hero-car {
+        right: -36%;
+        width: 154%;
+        bottom: 144px;
+      }
+
+      .timer-card {
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+      }
+
+      .benefits,
+      .gallery-grid,
+      .model-card__bottom {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-link:first-child {
+        grid-row: span 1;
+      }
+
+      .gallery-grid {
+        grid-auto-rows: 230px;
+      }
+
+      .steps__main {
+        min-height: 380px;
+        padding: 22px;
+        border-radius: 28px;
+      }
+
+      .step {
+        grid-template-columns: 1fr;
+      }
+
+      .slider-controls {
+        display: none;
+      }
+
+      .footer__inner {
+        display: grid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar" data-header>
+    <div class="container nav" aria-label="Основная навигация">
+      <a class="logo" href="#top" aria-label="HAVAL Special Offer">
+        <span class="logo__mark">H</span>
+        <span>HAVAL</span>
+      </a>
+
+      <nav class="nav__links" data-menu>
+        <a href="#benefits">Преимущества</a>
+        <a href="#models">Модели</a>
+        <a href="#process">Как получить</a>
+        <a href="#gallery">Галерея</a>
+        <a class="btn btn--ghost" data-fancybox data-src="#lead-modal" href="javascript:;">Получить предложение</a>
+      </nav>
+
+      <button class="burger" type="button" data-burger aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__content reveal">
+          <span class="eyebrow"><span class="pulse"></span> Спецпредложение до 1 июня</span>
+          <h1>Ваш новый <span class="gradient-text">HAVAL</span> с выгодой до 750 000 ₽</h1>
+          <p class="hero__lead">Премиальные условия на автомобили в наличии: trade-in, кредит от партнёров, расширенная гарантия и персональная комплектация под ваш стиль вождения.</p>
+
+          <div class="hero__actions">
+            <a class="btn" data-fancybox data-src="#lead-modal" href="javascript:;">Забронировать выгоду</a>
+            <a class="btn btn--ghost" href="#models">Смотреть модели</a>
+          </div>
+
+          <div class="stats" aria-label="Ключевые условия предложения">
+            <div class="stat glass">
+              <strong>0.01%</strong>
+              <span>ставка по выбранным кредитным программам</span>
+            </div>
+            <div class="stat glass">
+              <strong>24 ч</strong>
+              <span>фиксация автомобиля и цены по заявке</span>
+            </div>
+            <div class="stat glass">
+              <strong>5 лет</strong>
+              <span>гарантия и сервисная поддержка дилера</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-card glass reveal" aria-label="Главное предложение">
+          <div class="offer-chip">
+            <span>Limited offer</span>
+            <strong>Drive Future</strong>
+          </div>
+          <img class="hero-car" src="haval-assets/dargo-x-black.png" alt="HAVAL Dargo X в чёрном цвете" />
+          <div class="timer-card">
+            <div class="timer-card__head">
+              <span>До окончания предложения</span>
+              <span data-deadline-label></span>
+            </div>
+            <div class="countdown" data-countdown aria-live="polite">
+              <div class="countdown__item"><strong data-days>00</strong><span>дней</span></div>
+              <div class="countdown__item"><strong data-hours>00</strong><span>часов</span></div>
+              <div class="countdown__item"><strong data-minutes>00</strong><span>минут</span></div>
+              <div class="countdown__item"><strong data-seconds>00</strong><span>секунд</span></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="benefits">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Футуристичный комфорт уже в базовом сценарии покупки</h2>
+          <p>Мы объединили финансовые, сервисные и технологические преимущества в одном предложении, чтобы путь к новому автомобилю был быстрым и прозрачным.</p>
+        </div>
+
+        <div class="benefits">
+          <article class="benefit glass reveal">
+            <div class="benefit__icon">✦</div>
+            <h3>Персональная выгода</h3>
+            <p>Рассчитываем итоговую цену с учётом trade-in, кредита, страховки и выбранной комплектации.</p>
+          </article>
+          <article class="benefit glass reveal">
+            <div class="benefit__icon">⟡</div>
+            <h3>Авто в наличии</h3>
+            <p>Быстрая выдача, онлайн-бронирование и фиксация автомобиля до визита в дилерский центр.</p>
+          </article>
+          <article class="benefit glass reveal">
+            <div class="benefit__icon">◈</div>
+            <h3>Тест-драйв</h3>
+            <p>Подберём удобное время и маршрут, чтобы вы оценили динамику, обзорность и ассистенты.</p>
+          </article>
+          <article class="benefit glass reveal">
+            <div class="benefit__icon">◎</div>
+            <h3>Сервис 360°</h3>
+            <p>Помогаем с регистрацией, страхованием, аксессуарами и постпродажным обслуживанием.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="models" class="models">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow"><span class="pulse"></span> Модельный ряд</span>
+            <h2 style="margin-top:18px;">Выберите автомобиль под ваш сценарий</h2>
+          </div>
+          <div class="slider-controls" aria-label="Управление слайдером">
+            <button class="swiper-button-prev" type="button" aria-label="Предыдущий слайд"></button>
+            <button class="swiper-button-next" type="button" aria-label="Следующий слайд"></button>
+          </div>
+        </div>
+
+        <div class="swiper model-swiper reveal">
+          <div class="swiper-wrapper">
+            <article class="swiper-slide model-card">
+              <div class="model-card__top">
+                <div>
+                  <h3>HAVAL M6</h3>
+                  <p>Практичный семейный кроссовер с просторным салоном, лаконичным дизайном и выгодными комплектациями.</p>
+                </div>
+                <span class="badge">M6</span>
+              </div>
+              <div class="model-card__image model-card__image--product">
+                <img src="haval-assets/m6-silver.png" alt="HAVAL M6 в серебристом цвете" />
+              </div>
+              <div class="model-card__bottom">
+                <div class="price"><span>Выгода до</span><strong>450 000 ₽</strong></div>
+                <a class="btn" data-fancybox data-src="#lead-modal" href="javascript:;">Получить расчёт</a>
+              </div>
+            </article>
+
+            <article class="swiper-slide model-card">
+              <div class="model-card__top">
+                <div>
+                  <h3>HAVAL M6</h3>
+                  <p>Белый HAVAL M6 — универсальный вариант для города, семьи и ежедневных поездок.</p>
+                </div>
+                <span class="badge">White</span>
+              </div>
+              <div class="model-card__image model-card__image--product">
+                <img src="haval-assets/m6-white.png" alt="HAVAL M6 в белом цвете" />
+              </div>
+              <div class="model-card__bottom">
+                <div class="price"><span>Выгода до</span><strong>650 000 ₽</strong></div>
+                <a class="btn" data-fancybox data-src="#lead-modal" href="javascript:;">Получить расчёт</a>
+              </div>
+            </article>
+
+            <article class="swiper-slide model-card">
+              <div class="model-card__top">
+                <div>
+                  <h3>HAVAL Dargo X</h3>
+                  <p>Брутальный внедорожный характер, высокий клиренс и выразительный дизайн для активных маршрутов.</p>
+                </div>
+                <span class="badge">Dargo X</span>
+              </div>
+              <div class="model-card__image model-card__image--product">
+                <img src="haval-assets/dargo-x-black.png" alt="HAVAL Dargo X в чёрном цвете" />
+              </div>
+              <div class="model-card__bottom">
+                <div class="price"><span>Выгода до</span><strong>750 000 ₽</strong></div>
+                <a class="btn" data-fancybox data-src="#lead-modal" href="javascript:;">Получить расчёт</a>
+              </div>
+            </article>
+
+            <article class="swiper-slide model-card">
+              <div class="model-card__top">
+                <div>
+                  <h3>HAVAL Dargo X</h3>
+                  <p>Серый Dargo X подчёркивает внедорожную геометрию и строгую премиальную эстетику.</p>
+                </div>
+                <span class="badge">Graphite</span>
+              </div>
+              <div class="model-card__image model-card__image--product">
+                <img src="haval-assets/dargo-x-gray.png" alt="HAVAL Dargo X в графитовом цвете" />
+              </div>
+              <div class="model-card__bottom">
+                <div class="price"><span>Выгода до</span><strong>750 000 ₽</strong></div>
+                <a class="btn" data-fancybox data-src="#lead-modal" href="javascript:;">Получить расчёт</a>
+              </div>
+            </article>
+
+            <article class="swiper-slide model-card">
+              <div class="model-card__top">
+                <div>
+                  <h3>HAVAL Dargo X</h3>
+                  <p>Оранжевый Dargo X — акцентная версия для тех, кто выбирает заметный автомобиль.</p>
+                </div>
+                <span class="badge">Orange</span>
+              </div>
+              <div class="model-card__image model-card__image--product">
+                <img src="haval-assets/dargo-x-orange.png" alt="HAVAL Dargo X в оранжевом цвете" />
+              </div>
+              <div class="model-card__bottom">
+                <div class="price"><span>Выгода до</span><strong>750 000 ₽</strong></div>
+                <a class="btn" data-fancybox data-src="#lead-modal" href="javascript:;">Получить расчёт</a>
+              </div>
+            </article>
+
+            <article class="swiper-slide model-card">
+              <div class="model-card__top">
+                <div>
+                  <h3>HAVAL Dargo X</h3>
+                  <p>Белый Dargo X сочетает контрастный обвес, крупные колёса и современный SUV-силуэт.</p>
+                </div>
+                <span class="badge">White</span>
+              </div>
+              <div class="model-card__image model-card__image--product">
+                <img src="haval-assets/dargo-x-silver.png" alt="HAVAL Dargo X в белом цвете" />
+              </div>
+              <div class="model-card__bottom">
+                <div class="price"><span>Выгода до</span><strong>750 000 ₽</strong></div>
+                <a class="btn" data-fancybox data-src="#lead-modal" href="javascript:;">Получить расчёт</a>
+              </div>
+            </article>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="container steps">
+        <div class="steps__main reveal">
+          <span class="eyebrow"><span class="pulse"></span> 3 шага</span>
+          <h2>Получите персональное предложение без лишних звонков</h2>
+          <p>Оставьте номер, менеджер уточнит желаемую модель и подготовит расчёт с актуальными условиями дилера.</p>
+        </div>
+
+        <div class="step-list">
+          <article class="step glass reveal">
+            <div class="step__num">01</div>
+            <div>
+              <h3>Заявка</h3>
+              <p>Укажите телефон — форма не хранит секретные ключи и не содержит клиентских API-токенов.</p>
+            </div>
+          </article>
+          <article class="step glass reveal">
+            <div class="step__num">02</div>
+            <div>
+              <h3>Расчёт</h3>
+              <p>Подберём комплектацию, оценим trade-in и сравним доступные финансовые программы.</p>
+            </div>
+          </article>
+          <article class="step glass reveal">
+            <div class="step__num">03</div>
+            <div>
+              <h3>Бронь</h3>
+              <p>Зафиксируем автомобиль и пригласим на тест-драйв или выдачу в удобное время.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Галерея доступных моделей</h2>
+          <p>Dargo X и M6 в цветах из макета. Галерея открывается в Fancybox 3 и использует локальные изображения рядом с сайтом.</p>
+        </div>
+
+        <div class="gallery-grid reveal">
+          <a class="gallery-link gallery-link--product" data-fancybox="gallery" href="haval-assets/dargo-x-orange.png">
+            <img src="haval-assets/dargo-x-orange.png" alt="HAVAL Dargo X в оранжевом цвете" />
+          </a>
+          <a class="gallery-link gallery-link--product" data-fancybox="gallery" href="haval-assets/dargo-x-black.png">
+            <img src="haval-assets/dargo-x-black.png" alt="HAVAL Dargo X в черном цвете" />
+          </a>
+          <a class="gallery-link gallery-link--product" data-fancybox="gallery" href="haval-assets/dargo-x-silver.png">
+            <img src="haval-assets/dargo-x-silver.png" alt="HAVAL Dargo X в серебристом цвете" />
+          </a>
+          <a class="gallery-link gallery-link--product" data-fancybox="gallery" href="haval-assets/m6-silver.png">
+            <img src="haval-assets/m6-silver.png" alt="HAVAL M6 в серебристом цвете" />
+          </a>
+          <a class="gallery-link gallery-link--product" data-fancybox="gallery" href="haval-assets/m6-black.png">
+            <img src="haval-assets/m6-black.png" alt="HAVAL M6 в черном цвете" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <div class="cta-card glass reveal">
+          <span class="eyebrow"><span class="pulse"></span> Финальный шаг</span>
+          <h2>Зафиксируйте выгоду и получите расчёт за один контакт</h2>
+          <p>Оставьте номер телефона — мы подготовим индивидуальное предложение по выбранной модели и расскажем, какие автомобили доступны к выдаче сейчас.</p>
+          <a class="btn" data-fancybox data-src="#lead-modal" href="javascript:;">Оставить заявку</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© 2026 HAVAL Special Offer. Концепт премиального лендинга.</span>
+    </div>
+  </footer>
+
+  <div id="lead-modal" class="modal" aria-hidden="true">
+    <div class="modal__inner">
+      <h2>Получить предложение</h2>
+      <p>Укажите номер телефона. Менеджер свяжется с вами, чтобы рассчитать выгоду и забронировать автомобиль.</p>
+      <form class="form" data-lead-form>
+        <div class="field">
+          <label for="phone">Номер телефона</label>
+          <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required />
+        </div>
+        <button class="btn" type="submit">Отправить заявку</button>
+        <p class="policy">Нажимая кнопку, вы соглашаетесь на обработку персональных данных. Для реальной отправки подключайте серверный endpoint — не размещайте секретные ключи и API-токены в клиентском коде.</p>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    (() => {
+      const header = document.querySelector('[data-header]');
+      const burger = document.querySelector('[data-burger]');
+      const menu = document.querySelector('[data-menu]');
+      const revealItems = document.querySelectorAll('.reveal');
+
+      const syncHeader = () => {
+        header.classList.toggle('is-scrolled', window.scrollY > 16);
+      };
+
+      syncHeader();
+      window.addEventListener('scroll', syncHeader, { passive: true });
+
+      burger.addEventListener('click', () => {
+        const isOpen = menu.classList.toggle('is-open');
+        burger.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      menu.addEventListener('click', (event) => {
+        if (event.target.matches('a')) {
+          menu.classList.remove('is-open');
+          burger.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      new Swiper('.model-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 18,
+        loop: true,
+        speed: 760,
+        grabCursor: true,
+        autoplay: {
+          delay: 4300,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+          860: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1160: {
+            slidesPerView: 2.35,
+            spaceBetween: 22,
+          },
+        },
+      });
+
+      $('[data-fancybox]').fancybox({
+        touch: false,
+        animationEffect: 'zoom-in-out',
+        transitionEffect: 'slide',
+        buttons: ['close'],
+      });
+
+      const deadline = new Date('2026-06-01T00:00:00+03:00');
+
+      const deadlineLabel = document.querySelector('[data-deadline-label]');
+      const daysEl = document.querySelector('[data-days]');
+      const hoursEl = document.querySelector('[data-hours]');
+      const minutesEl = document.querySelector('[data-minutes]');
+      const secondsEl = document.querySelector('[data-seconds]');
+      const pad = (value) => String(value).padStart(2, '0');
+
+      deadlineLabel.textContent = deadline.toLocaleDateString('ru-RU', {
+        day: '2-digit',
+        month: 'long',
+        year: 'numeric',
+      });
+
+      const tickCountdown = () => {
+        const distance = Math.max(0, deadline.getTime() - Date.now());
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((distance / (1000 * 60)) % 60);
+        const seconds = Math.floor((distance / 1000) % 60);
+
+        daysEl.textContent = pad(days);
+        hoursEl.textContent = pad(hours);
+        minutesEl.textContent = pad(minutes);
+        secondsEl.textContent = pad(seconds);
+      };
+
+      tickCountdown();
+      setInterval(tickCountdown, 1000);
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.14 });
+
+      revealItems.forEach((item) => observer.observe(item));
+
+      const phoneInput = document.querySelector('#phone');
+      phoneInput.addEventListener('input', (event) => {
+        const digits = event.target.value.replace(/\D/g, '').slice(0, 11);
+        let value = '+7';
+        const local = digits.startsWith('7') || digits.startsWith('8') ? digits.slice(1) : digits;
+
+        if (local.length > 0) value += ' (' + local.slice(0, 3);
+        if (local.length >= 3) value += ') ' + local.slice(3, 6);
+        if (local.length >= 6) value += '-' + local.slice(6, 8);
+        if (local.length >= 8) value += '-' + local.slice(8, 10);
+
+        event.target.value = value;
+      });
+
+      document.querySelector('[data-lead-form]').addEventListener('submit', (event) => {
+        event.preventDefault();
+        const phone = phoneInput.value.trim();
+
+        if (phone.replace(/\D/g, '').length < 11) {
+          phoneInput.focus();
+          return;
+        }
+
+        event.target.innerHTML = `
+          <div class="offer-chip" style="width:100%; text-align:center;">
+            <span>Заявка принята</span>
+            <strong>Спасибо!</strong>
+          </div>
+          <p class="policy" style="font-size:14px;">Мы подготовим персональное предложение и свяжемся с вами по номеру ${phone}.</p>
+        `;
+      });
+    })();
+  </script>
+</body>
+</html>
